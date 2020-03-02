@@ -19,32 +19,12 @@ export default {
 </script>
 
 <style type="text/css" scoped>
-i.frontFlipBtn,
-i.backFlipBtn {
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  color: #ffffff;
-}
-i.backFlipBtn {
-  -webkit-transform: rotateY(-180deg);
-  -moz-transform: rotateY(-180deg);
-  -o-transform: rotateY(-180deg);
-  -ms-transform: rotateY(-180deg);
-  transform: rotateY(-180deg);
-}
-.flip-container {
-  -webkit-perspective: 1000;
-  -moz-perspective: 1000;
-  -o-perspective: 1000;
-  perspective: 1000;
-}
-.flip-container {
-  min-height: 120px;
-}
+.flip-container,
 .flipper {
-  -moz-transform: perspective(1000px);
-  -moz-transform-style: preserve-3d;
+  display: inline-block;
+}
+
+.flipper {
   position: relative;
 }
 .front,
@@ -63,9 +43,6 @@ i.backFlipBtn {
   -ms-transform-style: preserve-3d;
   transition: 0.6s;
   transform-style: preserve-3d;
-  top: 0;
-  left: 0;
-  width: 100%;
 }
 .back {
   -webkit-transform: rotateY(-180deg);
@@ -73,6 +50,7 @@ i.backFlipBtn {
   -o-transform: rotateY(-180deg);
   -ms-transform: rotateY(-180deg);
   transform: rotateY(-180deg);
+  top: 0;
   position: absolute;
 }
 .flip-container.flipped .back {
