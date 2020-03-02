@@ -1,14 +1,4 @@
 <template>
-  <!-- <div v-bind:class="{ active: isActive }"></div> -->
-  <!-- <div
-    class="card"
-    :class="{
-      'grey-card': cardType == 'grey' && turned,
-      'gold-card': cardType == 'bomb' && turned,
-      'red-card': cardType == 'bigben' && turned,
-      'brown-card': !turned
-    }"
-  /> -->
   <FlipCard :flipped="!turned">
     <template slot="front">
       <div
