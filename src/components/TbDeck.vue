@@ -21,7 +21,7 @@
 
 <template>
   <div class="TbDeck">
-    <TbCard v-for="i in cardNumber" :key="i" cardType="grey" />
+    <TbCard v-for="(card,index) in cards" :key="index" cardType="grey" />
   </div>
 </template>
 
@@ -34,10 +34,10 @@ export default {
     TbCard
   },
   props: {
-    cardNumber: {
-      type: Number,
+    cards: {
+      type: Array,
       validator: function(value) {
-        return value < 6 && value > 1;
+        return value.length < 6 && value.length > 1;
       },
       required: true
     }

@@ -1,22 +1,23 @@
 <template>
   <div class="home">
-    <TbCard cardType="grey" />
-    <TbCard cardType="bomb" />
-    <TbCard cardType="bigben" />
-    <TbDeck :cardNumber="5" />
+    <TbDeck v-for="player in players" :key="player.id" :cards="player.deck" />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import TbCard from "@/components/TbCard.vue";
+
 import TbDeck from "@/components/TbDeck.vue";
 
 export default {
   name: "Home",
   components: {
-    TbCard,
     TbDeck
+  },
+  computed: {
+    players() {
+      return this.$store.getters.playerDecks;
+    }
   }
 };
 </script>
