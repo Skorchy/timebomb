@@ -1,37 +1,21 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <template>
   <div class="TbDeck">
-    <TbCard v-for="(card,index) in cards" :key="index" cardType="grey" />
+    <div class="TbCards">
+      <TbCard v-for="(card,index) in cards" :key="index" cardType="grey" />
+    </div>
+    <TbPlayer playerName="Jack-I-Chan" />
   </div>
 </template>
 
 <script>
 import TbCard from "@/components/TbCard.vue";
+import TbPlayer from "@/components/TbPlayer.vue";
 
 export default {
   name: "TbDeck",
   components: {
-    TbCard
+    TbCard,
+    TbPlayer
   },
   props: {
     cards: {
@@ -46,12 +30,15 @@ export default {
 </script>
 
 <style>
+.TbCards {
+  background-color: aquamarine;
+  border: 3px solid rgb(124, 108, 17);
+  min-height: 100px;
+}
 .TbDeck {
   display: inline-block;
-  height: 100px;
-  width: 400px;
-  background-color: aquamarine;
   margin: 5px;
-  border: 3px solid rgb(124, 108, 17);
+  text-align: center;
+  width: 400px;
 }
 </style>
