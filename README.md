@@ -1,21 +1,27 @@
-# timebomb
+# Timebomb -- by Mickaël ROSE & Pierre Cavalet.
 
-## Project setup
+## Link(s): 
+
+**Prod**: https://timebombdespotes.netlify.app
+
+## Doc :
+
+TODO.
+
+## Usefull commands :
+**Setup**
 ```
 npm install
 ```
-
-### Compiles and hot-reloads for development
+**Compiles and hot-reloads for development**
 ```
 npm run serve
 ```
-
-### Compiles and minifies for production
+**Compiles and minifies for production**
 ```
 npm run build
 ```
-
-### Lints and fixes files
+**Lints and fixes files**
 ```
 npm run lint
 ```
